@@ -18,8 +18,10 @@ ALGORITHM="HS256"
 
 # エンコードして JWT 形式にする
 encoded = jwt.encode(payload=payload, key=SECRET_KEY, algorithm=ALGORITHM)
+print("エンコード:")
 print(encoded)
 
 # デコードして payload を取り出す
 decoded = jwt.decode(encoded, SECRET_KEY, algorithms=ALGORITHM)
+print("デコード:")
 print(decoded)
